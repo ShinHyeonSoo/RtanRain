@@ -18,7 +18,7 @@ public class Rain : MonoBehaviour
 
         transform.position = new Vector3(x, y, 0);
 
-        int type = Random.Range(1, 4);
+        int type = Random.Range(1, 5);
 
         if (type == 1)
         {
@@ -37,6 +37,12 @@ public class Rain : MonoBehaviour
             _Size = 1.2f;
             _Score = 3;
             _Renderer.color = new Color(150 / 255f, 150 / 255f, 1f, 1f);
+        }
+        else if (type == 4)
+        {
+            _Size = 0.8f;
+            _Score = -5;
+            _Renderer.color = new Color(1f, 100 / 255f, 1f, 1f);
         }
 
         transform.localScale = new Vector3(_Size, _Size, 0);
